@@ -11,6 +11,7 @@ langchain = "^0.0.352"
 pymupdf = "^1.23.8"
 gpt4all = "^2.0.2"
 chromadb = "^0.4.21"
+litestar = {extras = ["standard"], version = "^2.4.4"}
 
 
 [tool.poetry.group.dev.dependencies]
