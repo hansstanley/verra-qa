@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "verra"
+version = "0.1.0"
+description = ""
+authors = ["hansstanley <nusstuhss@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+langchain = "^0.0.352"
+pymupdf = "^1.23.8"
+gpt4all = "^2.0.2"
+chromadb = "^0.4.21"
+
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.27.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
