@@ -5,6 +5,8 @@ from langchain.llms import GPT4All
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.vectorstores import Chroma
 
+from verra import schema
+
 
 class VerraQA:
     def __init__(self, pdf_path: str, model_path: str) -> None:
@@ -28,5 +30,7 @@ class VerraQA:
             retriever=vectorstore.as_retriever(),
         )
 
-    def get_response(self, question: str) -> str:
-        return self.qa_chain({"query": question})["result"]
+    def get_response(self, question: str):
+        return schema.QAResponse.model_validate(
+            self.qa_chain({"query": question}),
+        )
